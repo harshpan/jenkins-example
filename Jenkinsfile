@@ -33,7 +33,7 @@ pipeline {
 
             steps {
                 agent { 
-                label 'slave'
+                label 'Slave'
             }
                 withMaven(maven : 'localMaven')
             }
