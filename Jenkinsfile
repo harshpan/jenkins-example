@@ -29,18 +29,6 @@ pipeline {
             }
        }
         
-         stage ('BuildSlave') {
-
-            steps {
-                agent { 
-                label 'Slave'
-            }
-                withMaven(maven : 'localMaven') {
-                 
-                     sh 'mvn install'
-                    
-                }
-            }
-        }
+     
     }
 }
