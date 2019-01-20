@@ -35,7 +35,11 @@ pipeline {
                 agent { 
                 label 'Slave'
             }
-                withMaven(maven : 'localMaven')
+                withMaven(maven : 'localMaven') {
+                 
+                     sh 'mvn deploy'
+                    
+                }
             }
         }
     }
